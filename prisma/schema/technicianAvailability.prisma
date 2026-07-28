@@ -1,0 +1,11 @@
+model TechnicianAvailability {
+  id                  String   @id @default(uuid())
+  technicianProfileId String
+  technicianProfile   TechnicianProfile @relation(fields: [technicianProfileId], references: [id])
+  dayOfWeek           Int      // 0-6 (Sun-Sat)
+  startTime           String   // "09:00"
+  endTime             String   // "17:00"
+  isBooked            Boolean  @default(false)
+
+  @@map("technician_availability")
+}
