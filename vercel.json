@@ -5,6 +5,9 @@
       "destination": "/api/index"
     }
   ],
-  "buildCommand": "echo skip",
-  "outputDirectory": "public"
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "prisma/generated/**"
+    }
+  }
 }
