@@ -16,7 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts",
      "build": "tsc",
-    "start": "tsx server.ts",
+    "start": "tsx src/server.ts",
     "postinstall": "prisma generate"
   },
   "devDependencies": {
