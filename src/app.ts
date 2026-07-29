@@ -4,6 +4,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import authRoutes from './modules/auth/auth.routes';
 import userRoutes from './modules/user/user.routes';
+import categoriesRoutes from './modules/categories/categories.routes';  
 
 const app : Application = express();
 
@@ -20,6 +21,7 @@ app.use(cookieParser());
 
 app.use('/api/auth', authRoutes);
 app.use('/api', userRoutes);
+app.use('/api', categoriesRoutes);
 
 app.get('/', (req:Request, res:Response) => {
     res.send('Hello, World!');
