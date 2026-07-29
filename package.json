@@ -15,7 +15,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts",
-    "start": "tsx server.ts"
+     "build": "tsc",
+    "start": "tsx server.ts",
+    "postinstall": "prisma generate"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.10",
@@ -24,6 +26,7 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^26.1.2",
     "@types/pg": "^8.20.0",
+    "@vercel/node": "^5.9.0",
     "pg": "^8.22.0",
     "prisma": "^7.8.0",
     "tsx": "^4.22.4",
