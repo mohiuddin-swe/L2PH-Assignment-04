@@ -9,7 +9,7 @@ import servicesRoutes from './modules/services/services.routes';
 import bookingRoutes from './modules/booking/booking.routes';
 import paymentRoutes from './modules/payment/payment.routes';
 import reviewRoutes from './modules/review/review.routes';
-
+import adminRoutes from './modules/admin/admin.routes';
 const app : Application = express();
 
 
@@ -30,6 +30,7 @@ app.use('/api', servicesRoutes);
 app.use('/api', bookingRoutes);
 app.use('/api', paymentRoutes);
 app.use('/api', reviewRoutes);
+app.use('/api', adminRoutes);
 
 app.get('/', (req:Request, res:Response) => {
     res.send('Hello, World!');
