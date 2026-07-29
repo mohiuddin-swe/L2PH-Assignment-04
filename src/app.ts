@@ -1,4 +1,6 @@
 import express, { Application, Request, Response } from 'express';
+import { notFoundHandler, globalErrorHandler } from './middlewares/errorHandler';
+
 import config from './config';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -35,5 +37,8 @@ app.use('/api', adminRoutes);
 app.get('/', (req:Request, res:Response) => {
     res.send('Hello, World!');
 });
+
+app.use(notFoundHandler);
+app.use(globalErrorHandler);
 
 export default app;

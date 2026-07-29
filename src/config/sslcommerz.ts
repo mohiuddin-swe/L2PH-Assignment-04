@@ -1,4 +1,5 @@
-import SSLCommerzPayment from 'sslcommerz-lts';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const SSLCommerzPayment = require('sslcommerz-lts');
 
 const store_id = process.env.SSLCOMMERZ_STORE_ID as string;
 const store_passwd = process.env.SSLCOMMERZ_STORE_PASSWORD as string;
