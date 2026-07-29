@@ -1,5 +1,5 @@
-import { prisma } from '../../lib/prisma';
-import { sslcz } from '../../config/sslcommerz';
+import { prisma } from '../../lib/prisma.js';
+import { sslcz } from '../../config/sslcommerz.js';
 
 export const createPayment = async (
   userId: string,

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { getAllUsers, updateUserStatus, getAllBookings } from './admin.service';
+import { getAllUsers, updateUserStatus, getAllBookings } from './admin.service.js';
 
 export const listUsers = async (req: Request, res: Response) => {
   try {

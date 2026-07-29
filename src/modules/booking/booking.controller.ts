@@ -1,12 +1,12 @@
 import { Response } from 'express';
-import { AuthRequest } from '../../middlewares/auth.middleware';
+import { AuthRequest } from '../../middlewares/auth.middleware.js';
 import {
   createBooking,
   getUserBookings,
   getBookingById,
   updateBookingStatus,
   cancelBooking,
-} from './booking.service';
+} from './booking.service.js';
 
 export const addBooking = async (req: AuthRequest, res: Response) => {
   try {

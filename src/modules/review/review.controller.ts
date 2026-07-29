@@ -1,6 +1,6 @@
 import { Response } from 'express';
-import { AuthRequest } from '../../middlewares/auth.middleware';
-import { createReview } from './review.service';
+import { AuthRequest } from '../../middlewares/auth.middleware.js';
+import { createReview } from './review.service.js';
 
 export const addReview = async (req: AuthRequest, res: Response) => {
   try {

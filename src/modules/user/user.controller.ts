@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import { AuthRequest } from '../../middlewares/auth.middleware';
+import { AuthRequest } from '../../middlewares/auth.middleware.js';
 import {
   getTechnicianProfile,
   updateTechnicianProfile,
   getAllTechnicians,
   getTechnicianById,
-} from './user.service';
+} from './user.service.js';
 
 export const getMyProfile = async (req: AuthRequest, res: Response) => {
   try {

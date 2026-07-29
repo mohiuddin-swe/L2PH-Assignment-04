@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { AuthRequest } from '../../middlewares/auth.middleware';
-import { createService, getAllServices, updateService } from './services.service';
+import { AuthRequest } from '../../middlewares/auth.middleware.js';
+import { createService, getAllServices, updateService } from './services.service.js';
 
 export const addService = async (req: AuthRequest, res: Response) => {
   try {

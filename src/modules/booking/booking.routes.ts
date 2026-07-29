@@ -5,8 +5,8 @@ import {
   getBooking,
   changeBookingStatus,
   cancelMyBooking,
-} from './booking.controller';
-import { authenticate, authorize } from '../../middlewares/auth.middleware';
+} from './booking.controller.js';
+import { authenticate, authorize } from '../../middlewares/auth.middleware.js';
 
 const router = Router();
 

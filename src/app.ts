@@ -1,17 +1,17 @@
 import express, { Application, Request, Response } from 'express';
-import { notFoundHandler, globalErrorHandler } from './middlewares/errorHandler';
+import { notFoundHandler, globalErrorHandler } from './middlewares/errorHandler.js';
 
-import config from './config';
+import config from './config/index.js';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import authRoutes from './modules/auth/auth.routes';
-import userRoutes from './modules/user/user.routes';
-import categoriesRoutes from './modules/categories/categories.routes';  
-import servicesRoutes from './modules/services/services.routes';
-import bookingRoutes from './modules/booking/booking.routes';
-import paymentRoutes from './modules/payment/payment.routes';
-import reviewRoutes from './modules/review/review.routes';
-import adminRoutes from './modules/admin/admin.routes';
+import authRoutes from './modules/auth/auth.routes.js';
+import userRoutes from './modules/user/user.routes.js';
+import categoriesRoutes from './modules/categories/categories.routes.js';  
+import servicesRoutes from './modules/services/services.routes.js';
+import bookingRoutes from './modules/booking/booking.routes.js';
+import paymentRoutes from './modules/payment/payment.routes.js';
+import reviewRoutes from './modules/review/review.routes.js';
+import adminRoutes from './modules/admin/admin.routes.js';
 const app : Application = express();
 
 
