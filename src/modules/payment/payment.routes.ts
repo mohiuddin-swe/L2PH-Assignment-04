@@ -1,10 +1,11 @@
 import { Router } from 'express';
 import { initiatePayment, verifyPayment, myPayments, getPayment } from './payment.controller.js';
 import { authenticate, authorize } from '../../middlewares/auth.middleware.js';
-
+import { validate } from '../../utils/validate.js';
+import { createPaymentSchema } from './payment.validation.js'; 
 const router = Router();
 
-router.post('/payments/create', authenticate, authorize('CUSTOMER'), initiatePayment);
+router.post('/payments/create', authenticate, authorize('CUSTOMER'), validate(createPaymentSchema), initiatePayment);
 router.get('/payments/confirm', verifyPayment);
 router.post('/payments/confirm', verifyPayment);
 router.get('/payments', authenticate, myPayments);
