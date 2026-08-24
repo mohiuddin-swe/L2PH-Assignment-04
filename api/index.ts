@@ -10,6 +10,7 @@ import bookingRoutes from '../src/modules/booking/booking.routes.js';
 import paymentRoutes from '../src/modules/payment/payment.routes.js';
 import reviewRoutes from '../src/modules/review/review.routes.js';
 import adminRoutes from '../src/modules/admin/admin.routes.js';
+import availabilityRoutes from '../src/modules/availability/availability.routes.js';
 import { notFoundHandler, globalErrorHandler } from '../src/middlewares/errorHandler.js';
 
 const app: Application = express();
@@ -27,6 +28,7 @@ app.use('/api', bookingRoutes);
 app.use('/api', paymentRoutes);
 app.use('/api', reviewRoutes);
 app.use('/api', adminRoutes);
+app.use('/api', availabilityRoutes);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, World!');
