@@ -12,6 +12,7 @@ import bookingRoutes from './modules/booking/booking.routes.js';
 import paymentRoutes from './modules/payment/payment.routes.js';
 import reviewRoutes from './modules/review/review.routes.js';
 import adminRoutes from './modules/admin/admin.routes.js';
+import availabilityRoutes from './modules/availability/availability.routes.js';
 const app : Application = express();
 
 
@@ -33,7 +34,7 @@ app.use('/api', bookingRoutes);
 app.use('/api', paymentRoutes);
 app.use('/api', reviewRoutes);
 app.use('/api', adminRoutes);
-
+app.use('/api', availabilityRoutes);
 app.get('/', (req:Request, res:Response) => {
     res.send('Hello, World!');
 });
