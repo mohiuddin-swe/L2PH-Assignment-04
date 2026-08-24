@@ -3,7 +3,13 @@ import { prisma } from '../../lib/prisma.js';
 export const getTechnicianProfile = async (userId: string) => {
   const profile = await prisma.technicianProfile.findUnique({
     where: { userId },
-    include: { user: { select: { id: true, name: true, email: true } } },
+    include: {
+      user: { select: { id: true, name: true, email: true } },
+      services: {
+        include: { category: true },
+        orderBy: { createdAt: 'desc' },
+      },
+    },
   });
   if (!profile) throw new Error('Technician profile not found');
   return profile;
