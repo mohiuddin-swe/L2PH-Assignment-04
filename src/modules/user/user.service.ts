@@ -5,7 +5,10 @@ export const getTechnicianProfile = async (userId: string) => {
     where: { userId },
     include: {
       user: { select: { id: true, name: true, email: true } },
-      services: { include: { category: true } },
+      services: {
+        include: { category: true },
+        orderBy: { createdAt: 'desc' },
+      },
     },
   });
   if (!profile) throw new Error('Technician profile not found');
